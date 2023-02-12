@@ -1,0 +1,103 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    justify-content: end;
+    align-items: end; 
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
+.header{
+   width: 100%;
+   height:100vh;
+}
+.navigation{
+    position: relative;
+    height: 100vh;
+    width: 70px;
+    background-color: #424242;
+    box-shadow: 10px 0 0  #ff0080;
+    border-left: 10px solid #424242;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.navigation:hover{
+    width: 300px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+.navigation ul li a .title{
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.navigation ul li.active{
+    background-color: #ff0080;
+}
+.navigation ul li.active a::before{
+    position:absolute;
+    top: -30px;
+    right: 0;
+    width:30px;
+    height:30px;
+    background-color: #424242; 
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #ff0080;
+}
+.navigation ul li.active a::after{
+    content: '';
+    position:absolute;
+    bottom:-30px;
+    right: 0;
+    width:30px;
+    height:30px;
+    background-color: #424242;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #ff0080;
+}
+
+  
+
+
+
